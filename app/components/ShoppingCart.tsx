@@ -13,15 +13,14 @@ interface CartItem {
   image: string;
 }
 
-const initialItems: CartItem[] = [
-  { id: 1, name: 'Holiday Magic Box', price: 49.99, quantity: 1, image: '🎁' },
-  { id: 2, name: 'Winter Wonderland', price: 39.99, quantity: 2, image: '❄️' },
-  { id: 3, name: 'Festive Delights', price: 59.99, quantity: 1, image: '🎄' },
+const initialBookings: CartItem[] = [
+  { id: 1, name: 'Christmas Light Consultation', price: 0, quantity: 1, image: '💡' },
+  { id: 2, name: 'Gutter Cleaning Service', price: 149, quantity: 1, image: '�' },
 ];
 
 export default function ShoppingCart() {
   const [isOpen, setIsOpen] = useState(false);
-  const [items, setItems] = useState<CartItem[]>(initialItems);
+  const [items, setItems] = useState<CartItem[]>(initialBookings);
 
   const updateQuantity = (id: number, change: number) => {
     setItems(items.map(item => {
@@ -43,7 +42,7 @@ export default function ShoppingCart() {
       origin: { y: 0.6 },
       colors: ['#dc2626', '#16a34a', '#fbbf24'],
     });
-    alert('🎉 Order placed! Merry Christmas! 🎄');
+    alert('🎉 Booking submitted! We\'ll contact you within 24 hours! 🎄');
   };
 
   return (
@@ -92,7 +91,7 @@ export default function ShoppingCart() {
               <div className="p-6 border-b border-white/10 flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-2">
                   <ShoppingBag className="w-6 h-6 text-christmas-gold" />
-                  Shopping Cart
+                  Service Booking
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -106,8 +105,9 @@ export default function ShoppingCart() {
               <div className="flex-1 overflow-y-auto p-6 space-y-4">
                 {items.length === 0 ? (
                   <div className="text-center py-12">
-                    <div className="text-6xl mb-4">🎁</div>
-                    <p className="text-white/60">Your cart is empty</p>
+                    <div className="text-6xl mb-4">📅</div>
+                    <p className="text-white/60">No services booked yet</p>
+                    <p className="text-white/40 text-sm mt-2">Add services to request a quote</p>
                   </div>
                 ) : (
                   items.map((item) => (
@@ -154,10 +154,13 @@ export default function ShoppingCart() {
               {items.length > 0 && (
                 <div className="p-6 border-t border-white/10 space-y-4">
                   <div className="flex items-center justify-between text-white">
-                    <span className="text-lg">Subtotal:</span>
+                    <span className="text-lg">Estimated Total:</span>
                     <span className="text-2xl font-bold text-christmas-gold">
-                      ${total.toFixed(2)}
+                      {total === 0 ? 'FREE QUOTE' : `$${total.toFixed(2)}+`}
                     </span>
+                  </div>
+                  <div className="text-xs text-white/60 text-center">
+                    *Final pricing determined after consultation
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
@@ -166,7 +169,7 @@ export default function ShoppingCart() {
                     className="w-full bg-gradient-to-r from-christmas-red to-christmas-green text-white font-bold py-4 rounded-full flex items-center justify-center gap-2 shadow-2xl"
                   >
                     <CreditCard className="w-5 h-5" />
-                    Checkout Now
+                    📞 Request Quote
                   </motion.button>
                 </div>
               )}

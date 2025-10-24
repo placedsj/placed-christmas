@@ -26,10 +26,10 @@ export default function Newsletter() {
       className="bg-gradient-to-r from-christmas-red to-christmas-green rounded-3xl p-8 md:p-12 text-center shadow-2xl"
     >
       <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-        🎄 Join Our Holiday List! 🎄
+        🎄 Stay Connected with PLACED! 🎄
       </h2>
       <p className="text-white/90 text-lg mb-8">
-        Get exclusive deals and festive updates delivered to your inbox
+        Get early booking discounts, maintenance tips, and seasonal updates for the Greater Saint John area
       </p>
       
       {!submitted ? (
@@ -60,7 +60,7 @@ export default function Newsletter() {
           animate={{ scale: 1 }}
           className="text-white text-xl font-bold"
         >
-          🎉 Welcome to the nice list! Check your email! 🎉
+          🎉 Thanks for joining! Watch for early bird specials! 🎉
         </motion.div>
       )}
     </motion.div>

@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Gift, User } from 'lucide-react';
-import ShoppingCart from './ShoppingCart';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
@@ -48,23 +47,26 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {['Services', 'Gallery', 'Process', 'Contact'].map((item) => (
+            {['Services', 'Gallery', 'Process', 'Handbook', 'Contact'].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-white/80 hover:text-white font-medium transition-colors"
+                className="text-white/80 hover:text-white font-medium transition-colors relative group"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item}
+                {item === 'Handbook' && (
+                  <span className="absolute -top-2 -right-2 text-xs bg-christmas-red text-white rounded-full px-2 py-1 group-hover:scale-110 transition-transform">
+                    NEW
+                  </span>
+                )}
               </motion.a>
             ))}
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center gap-4">
-            <ShoppingCart />
-            
             <ThemeToggle />
 
             <motion.button
@@ -100,14 +102,19 @@ export default function Navbar() {
             className="md:hidden bg-slate-900/98 backdrop-blur-lg border-t border-white/10"
           >
             <div className="px-4 py-6 space-y-4">
-              {['Shop', 'Calendar', 'Gifts', 'About'].map((item) => (
+              {['Services', 'Gallery', 'Process', 'Handbook', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="block text-white/80 hover:text-white font-medium py-2"
+                  className="block text-white/80 hover:text-white font-medium py-2 flex items-center justify-between"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  <span>{item}</span>
+                  {item === 'Handbook' && (
+                    <span className="text-xs bg-christmas-red text-white rounded-full px-2 py-1">
+                      NEW
+                    </span>
+                  )}
                 </a>
               ))}
             </div>
