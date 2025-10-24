@@ -6,42 +6,40 @@ import { Gift, Heart, Star, Sparkles, X } from 'lucide-react';
 
 const questions = [
   {
-    question: "Who's the gift for?",
+    question: "What type of property?",
     options: [
-      { text: 'Mom', icon: '👩' },
-      { text: 'Dad', icon: '👨' },
-      { text: 'Partner', icon: '💑' },
-      { text: 'Friend', icon: '👥' },
-      { text: 'Kid', icon: '👶' },
-      { text: 'Pet', icon: '🐶' },
+      { text: 'Single Family Home', icon: '🏠' },
+      { text: 'Townhouse', icon: '🏘️' },
+      { text: 'Commercial Building', icon: '🏢' },
+      { text: 'Apartment Complex', icon: '🏬' },
     ],
   },
   {
-    question: "What's your budget?",
+    question: "What's your budget range?",
     options: [
-      { text: 'Under $25', icon: '💵' },
-      { text: '$25-$50', icon: '💰' },
-      { text: '$50-$100', icon: '💳' },
-      { text: '$100+', icon: '💎' },
+      { text: 'Under $500', icon: '💵' },
+      { text: '$500-$1000', icon: '💰' },
+      { text: '$1000-$2000', icon: '💳' },
+      { text: '$2000+', icon: '💎' },
     ],
   },
   {
-    question: 'What are they into?',
+    question: 'Which services do you need?',
     options: [
-      { text: 'Tech', icon: '📱' },
-      { text: 'Fashion', icon: '👗' },
-      { text: 'Food', icon: '🍕' },
-      { text: 'Games', icon: '🎮' },
-      { text: 'Books', icon: '📚' },
-      { text: 'Sports', icon: '⚽' },
+      { text: 'Light Installation', icon: '�' },
+      { text: 'Gutter Cleaning', icon: '🏠' },
+      { text: 'Exterior Inspection', icon: '🔍' },
+      { text: 'Full Package', icon: '⭐' },
+      { text: 'Maintenance Only', icon: '�' },
+      { text: 'Custom Design', icon: '🎨' },
     ],
   },
 ];
 
 const recommendations = [
-  { name: 'Premium Gift Box', price: '$49.99', icon: Gift, match: 85 },
-  { name: 'Deluxe Collection', price: '$79.99', icon: Heart, match: 92 },
-  { name: 'Ultimate Bundle', price: '$129.99', icon: Star, match: 78 },
+  { name: 'Basic Light Package', price: 'Starting at $299', icon: Gift, match: 85 },
+  { name: 'Premium Holiday Service', price: 'Starting at $599', icon: Heart, match: 92 },
+  { name: 'Complete Holiday Solution', price: 'Starting at $899', icon: Star, match: 78 },
 ];
 
 export default function GiftFinder() {
@@ -77,7 +75,7 @@ export default function GiftFinder() {
         className="bg-gradient-to-r from-christmas-gold to-yellow-600 text-white font-bold py-4 px-8 rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center gap-3"
       >
         <Sparkles className="w-6 h-6" />
-        <span>Find Perfect Gift 🎁</span>
+        <span>🎄 Free Consultation</span>
       </motion.button>
 
       {/* Modal */}
@@ -147,7 +145,7 @@ export default function GiftFinder() {
               ) : (
                 <>
                   <h3 className="text-3xl font-bold text-white mb-6 text-center">
-                    🎁 Perfect Matches For You! 🎁
+                    � Recommended Services For You! �
                   </h3>
 
                   <div className="space-y-4 mb-6">
@@ -190,7 +188,7 @@ export default function GiftFinder() {
                       Try Again
                     </button>
                     <button className="flex-1 bg-gradient-to-r from-christmas-red to-christmas-green text-white font-bold py-3 rounded-full hover:shadow-xl transition-all">
-                      Shop Now
+                      📞 Book Service
                     </button>
                   </div>
                 </>

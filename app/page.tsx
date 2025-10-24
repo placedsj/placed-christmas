@@ -19,6 +19,7 @@ import WishlistMaker from './components/WishlistMaker';
 import LiveNotifications from './components/LiveNotifications';
 import ChristmasLights from './components/ChristmasLights';
 import BudgetCalculator from './components/BudgetCalculator';
+import ServiceArea from './components/ServiceArea';
 
 export default function Home() {
   return (
@@ -38,10 +39,13 @@ export default function Home() {
             <Sparkles className="w-16 h-16 md:w-24 md:h-24 text-christmas-gold animate-pulse" />
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 glowing-text">
-            🎄 Christmas Magic 🎄
+            🎄 PLACED 🎄
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto">
-            Experience the most wonderful time of the year with our festive collection
+          <h2 className="text-2xl md:text-4xl font-bold text-christmas-gold mb-6">
+            YOUR CHRISTMAS, OUR HANDS
+          </h2>
+          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto">
+            Professional Christmas Light Installation & Holiday Services in Saint John, Quispamsis & Rothesay
           </p>
           
           <div className="mb-12">
@@ -52,7 +56,6 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <GiftFinder />
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -66,10 +69,11 @@ export default function Home() {
                   });
                 });
               }}
-              className="bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold py-4 px-8 rounded-full text-lg hover:scale-105 transition-transform"
+              className="bg-gradient-to-r from-christmas-red to-christmas-green text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl"
             >
-              Explore Gifts ✨
+              📞 BOOK NOW - FREE QUOTE
             </motion.button>
+            <GiftFinder />
           </div>
         </div>
       </section>
@@ -106,7 +110,7 @@ export default function Home() {
             </div>
             
             <div className="lg:sticky lg:top-24">
-              <SantaTracker />
+              <ServiceArea />
             </div>
           </div>
         </div>
@@ -132,10 +136,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              🎁 Featured Gifts 🎁
+              � Our Services �
             </h2>
             <p className="text-xl text-white/80">
-              Handpicked treasures for your loved ones
+              Professional Christmas light installation & holiday services
             </p>
           </div>
           <ProductShowcase />

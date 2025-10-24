@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 
 const notifications = [
-  { name: 'Sarah from NYC', item: 'Holiday Magic Box', time: '2 min ago' },
-  { name: 'Mike from LA', item: 'Winter Wonderland', time: '5 min ago' },
-  { name: 'Emma from London', item: 'Festive Delights', time: '8 min ago' },
-  { name: 'Alex from Tokyo', item: 'Christmas Dreams', time: '12 min ago' },
-  { name: 'Lisa from Paris', item: "Santa's Special", time: '15 min ago' },
+  { name: 'Sarah from Quispamsis', item: 'Christmas Light Installation', time: '2 min ago' },
+  { name: 'Mike from Saint John', item: 'Gutter Cleaning Service', time: '5 min ago' },
+  { name: 'Emma from Rothesay', item: 'Full Holiday Package', time: '8 min ago' },
+  { name: 'Alex from Hampton', item: 'Exterior Inspection', time: '12 min ago' },
+  { name: 'Lisa from Grand Bay', item: 'Custom Light Display', time: '15 min ago' },
 ];
 
 export default function LiveNotifications() {
@@ -66,7 +66,7 @@ export default function LiveNotifications() {
                   <span className="text-christmas-red">
                     {notifications[currentNotification].name}
                   </span>{' '}
-                  just purchased
+                  just booked
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-300 truncate">
                   {notifications[currentNotification].item}

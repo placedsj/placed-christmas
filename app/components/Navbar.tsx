@@ -36,14 +36,19 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
           >
             <Gift className="w-8 h-8 text-christmas-gold" />
-            <span className="text-xl md:text-2xl font-bold text-white">
-              Christmas Magic
-            </span>
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-bold text-white">
+                PLACED
+              </span>
+              <span className="text-xs text-christmas-gold hidden md:block">
+                Your Christmas, Our Hands
+              </span>
+            </div>
           </motion.div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {['Shop', 'Calendar', 'Gifts', 'About'].map((item) => (
+            {['Services', 'Gallery', 'Process', 'Contact'].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
