@@ -195,59 +195,59 @@ export default function Home() {
       </section>
 
       {/* 4-Step Process */}
-      <section className="py-20 bg-white">
+      <section className="py-40 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
+          <div className="text-center mb-32">
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-800 mb-12">
               🚀 Professional Christmas Light Installation Made Easy 🚀
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               At PLACED, we believe holiday lights should be a source of happiness, not stress. 
               Our expert team follows a simple 4-step process to ensure flawless installation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
             {/* Step 1 */}
             <div className="text-center">
-              <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              <div className="bg-red-600 text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-12 text-3xl font-bold shadow-xl">
                 1️⃣
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">📋 Free Design Consultation</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">📋 Free Design Consultation</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 Our designers work with you to create a unique Christmas lighting scheme that complements your space and budget.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="text-center">
-              <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              <div className="bg-red-600 text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-12 text-3xl font-bold shadow-xl">
                 2️⃣
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">🔨 Professional Installation</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">🔨 Professional Installation</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 Our skilled installers handle everything safely and efficiently using commercial-grade, high-quality lights.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="text-center">
-              <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              <div className="bg-red-600 text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-12 text-3xl font-bold shadow-xl">
                 3️⃣
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">🛠️ Maintenance & Support</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">🛠️ Maintenance & Support</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 We offer full maintenance throughout the holiday season, keeping your display bright and beautiful all winter long.
               </p>
             </div>
 
             {/* Step 4 */}
             <div className="text-center">
-              <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              <div className="bg-red-600 text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-12 text-3xl font-bold shadow-xl">
                 4️⃣
               </div>
-              <h3 className="text-xl font-bold text-slate-800 mb-4">📦 Safe Takedown & Storage</h3>
-              <p className="text-slate-600">
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">📦 Safe Takedown & Storage</h3>
+              <p className="text-lg text-slate-600 leading-relaxed">
                 When the season ends, we carefully remove and store your lights, ensuring your investment stays protected.
               </p>
             </div>
@@ -256,84 +256,90 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-40 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
+          <div className="text-center mb-32">
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-800 mb-12">
               ⭐ What Our Customers Say ⭐
             </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Real reviews from happy customers across Maritime Canada
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Testimonial 1 */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex items-center mb-4">
+            <div className="bg-white rounded-2xl shadow-xl p-12">
+              <div className="flex items-center mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current mr-1" />
                 ))}
               </div>
-              <p className="text-slate-600 mb-6 italic">
+              <p className="text-lg text-slate-600 mb-8 italic leading-relaxed">
                 "This Christmas light installation company turned our home into a holiday wonderland. 
                 The lights were stunning, and the service was professional and stress-free! 🎄✨"
               </p>
-              <div className="font-bold text-slate-800">SARAH M.</div>
-              <div className="text-slate-500">Rothesay, NB 🏠</div>
+              <div className="font-bold text-slate-800 text-lg">SARAH M.</div>
+              <div className="text-slate-500 mt-2">Rothesay, NB 🏠</div>
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex items-center mb-4">
+            <div className="bg-white rounded-2xl shadow-xl p-12">
+              <div className="flex items-center mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current mr-1" />
                 ))}
               </div>
-              <p className="text-slate-600 mb-6 italic">
+              <p className="text-lg text-slate-600 mb-8 italic leading-relaxed">
                 "We've never seen our house look this magical! The team designed a beautiful display that wowed our neighbors all season. 🌟"
               </p>
-              <div className="font-bold text-slate-800">MIKE F.</div>
-              <div className="text-slate-500">Saint John, NB 🏘️</div>
+              <div className="font-bold text-slate-800 text-lg">MIKE F.</div>
+              <div className="text-slate-500 mt-2">Saint John, NB 🏘️</div>
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <div className="flex items-center mb-4">
+            <div className="bg-white rounded-2xl shadow-xl p-12">
+              <div className="flex items-center mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current mr-1" />
                 ))}
               </div>
-              <p className="text-slate-600 mb-6 italic">
+              <p className="text-lg text-slate-600 mb-8 italic leading-relaxed">
                 "From start to finish, everything was seamless. PLACED handled design, setup, and removal with such care. Truly the best service! 🙌"
               </p>
-              <div className="font-bold text-slate-800">JENNIFER P.</div>
-              <div className="text-slate-500">Quispamsis, NB 🌲</div>
+              <div className="font-bold text-slate-800 text-lg">JENNIFER P.</div>
+              <div className="text-slate-500 mt-2">Quispamsis, NB 🌲</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800 mb-6">
+      <section className="py-40 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-32">
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-800 mb-12">
               ❓ Frequently Asked Questions ❓
             </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Everything you need to know about our Christmas light installation services
+            </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-slate-200 rounded-lg">
+              <div key={index} className="border border-slate-200 rounded-2xl shadow-lg">
                 <button
-                  className="w-full px-6 py-4 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors flex justify-between items-center"
+                  className="w-full px-8 py-8 text-left font-semibold text-slate-800 hover:bg-slate-50 transition-colors flex justify-between items-center text-xl"
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <span>{faq.question}</span>
-                  <span className={`transform transition-transform ${openFaq === index ? 'rotate-180' : ''}`}>
+                  <span className={`transform transition-transform text-2xl ${openFaq === index ? 'rotate-180' : ''}`}>
                     ▼
                   </span>
                 </button>
                 {openFaq === index && (
-                  <div className="px-6 pb-4 text-slate-600">
+                  <div className="px-8 pb-8 text-slate-600 text-lg leading-relaxed">
                     {faq.answer}
                   </div>
                 )}
@@ -344,61 +350,61 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
+      <footer className="bg-slate-900 text-white py-24">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             {/* Logo & Contact */}
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <Gift className="w-8 h-8 text-yellow-400" />
+              <div className="flex items-center gap-3 mb-8">
+                <Gift className="w-12 h-12 text-yellow-400" />
                 <div>
-                  <div className="text-2xl font-bold">🎄 PLACED 🎄</div>
-                  <div className="text-yellow-400 text-sm">Your Christmas, Our Hands ✋</div>
+                  <div className="text-3xl font-bold">🎄 PLACED 🎄</div>
+                  <div className="text-yellow-400 text-lg">Your Christmas, Our Hands ✋</div>
                 </div>
               </div>
-              <p className="text-slate-300 mb-6">
+              <p className="text-slate-300 mb-8 text-lg leading-relaxed">
                 Professional Christmas light installation serving Maritime Canada with expert design, installation, and maintenance services. 🇨🇦
               </p>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-yellow-400" />
-                  <span>📞 (506) 123-XMAS</span>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Phone className="w-6 h-6 text-yellow-400" />
+                  <span className="text-lg">📞 (506) 123-XMAS</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-yellow-400" />
-                  <span>📧 hello@placedchristmas.ca</span>
+                <div className="flex items-center gap-3">
+                  <Mail className="w-6 h-6 text-yellow-400" />
+                  <span className="text-lg">📧 hello@placedchristmas.ca</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-yellow-400" />
-                  <span>📍 Saint John, NB & Area</span>
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-6 h-6 text-yellow-400" />
+                  <span className="text-lg">📍 Saint John, NB & Area</span>
                 </div>
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">🔗 Quick Links</h4>
-              <ul className="space-y-2 text-slate-300">
-                <li><a href="#services" className="hover:text-white transition-colors">Our Services</a></li>
-                <li><a href="tel:(506)123-XMAS" className="hover:text-white transition-colors">Get Quote</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <h4 className="text-2xl font-semibold mb-8">🔗 Quick Links</h4>
+              <ul className="space-y-4 text-slate-300">
+                <li><a href="#services" className="hover:text-white transition-colors text-lg">Our Services</a></li>
+                <li><a href="tel:(506)123-XMAS" className="hover:text-white transition-colors text-lg">Get Quote</a></li>
+                <li><a href="#contact" className="hover:text-white transition-colors text-lg">Contact</a></li>
               </ul>
             </div>
 
             {/* Services */}
             <div>
-              <h4 className="text-lg font-semibold mb-4">🎯 Services</h4>
-              <ul className="space-y-2 text-slate-300">
-                <li>🎄 Christmas Light Installation</li>
-                <li>🌿 Landscape Lighting</li>
-                <li>🏢 Commercial Lighting</li>
-                <li>🛠️ Maintenance & Storage</li>
+              <h4 className="text-2xl font-semibold mb-8">🎯 Services</h4>
+              <ul className="space-y-4 text-slate-300">
+                <li className="text-lg">🎄 Christmas Light Installation</li>
+                <li className="text-lg">🌿 Landscape Lighting</li>
+                <li className="text-lg">🏢 Commercial Lighting</li>
+                <li className="text-lg">🛠️ Maintenance & Storage</li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-slate-700 pt-8 text-center text-slate-400">
-            <p>© 2025 PLACED Christmas Services. All rights reserved. Made with ❤️ in Maritime Canada 🇨🇦</p>
+          <div className="border-t border-slate-700 pt-12 text-center text-slate-400">
+            <p className="text-lg">© 2025 PLACED Christmas Services. All rights reserved. Made with ❤️ in Maritime Canada 🇨🇦</p>
           </div>
         </div>
       </footer>
