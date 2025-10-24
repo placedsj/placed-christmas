@@ -1,85 +1,247 @@
 ﻿'use client';
 
-import { Phone, Mail, MapPin, Star, ArrowRight, Zap, Users, Gift } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, ArrowRight, Zap, Users, Gift, Check } from 'lucide-react';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const faqs = [
-    {
-      question: "How far in advance should I book Christmas light installation?",
-      answer: "We recommend booking at least 4-6 weeks before the holiday season to secure your preferred installation date and ensure the best service."
-    },
-    {
-      question: "Do you provide custom lighting designs for homes and businesses?",
-      answer: "Absolutely! Our design team creates custom lighting displays tailored to your property, style preferences, and budget."
-    },
-    {
-      question: "What's included in your maintenance service?",
-      answer: "Our maintenance service includes bulb replacement, troubleshooting, adjustments, and ensuring your display stays bright throughout the season."
-    },
-    {
-      question: "How much does professional Christmas light installation cost?",
-      answer: "Residential installations start at $299. We provide free consultations and quotes based on your specific needs and property size."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-red-950 to-green-950 text-white min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-32">
-          <div className="text-center max-w-5xl mx-auto">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight">
-              🎄 Make This Season Shine 🎄
-            </h1>
-            <h2 className="text-2xl md:text-4xl font-bold mb-8 text-yellow-400">
-              Professional Christmas Light Installation
+      {/* Hero Section - Clean and Simple */}
+      <section className="bg-gradient-to-br from-emerald-900 via-red-900 to-green-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Professional Christmas Light Installation
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 opacity-90">
+            Transform your property into a winter wonderland
+          </p>
+          <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+            <a
+              href="tel:(506)123-XMAS"
+              className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 rounded-lg font-semibold text-lg transition-colors"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Get Free Quote
+            </a>
+            <a
+              href="#services"
+              className="inline-flex items-center px-8 py-4 bg-white/20 hover:bg-white/30 rounded-lg font-semibold text-lg transition-colors"
+            >
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Our Services
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your property into a winter wonderland with our expert Christmas light installation services across Maritime Canada
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Complete Christmas lighting solutions for homes and businesses
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-16">
-              <a
-                href="tel:(506)123-XMAS"
-                className="bg-red-600 hover:bg-red-700 text-white font-bold py-6 px-12 rounded-xl text-xl transition-all flex items-center justify-center gap-3 shadow-2xl"
-              >
-                <Phone className="w-6 h-6" />
-                📞 Call (506) 123-XMAS
-              </a>
-              <a
-                href="#services"
-                className="bg-white/10 backdrop-blur hover:bg-white/20 text-white font-bold py-6 px-12 rounded-xl text-xl border border-white/20 transition-all flex items-center justify-center gap-3"
-              >
-                <ArrowRight className="w-6 h-6" />
-                View Our Services
-              </a>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Installation</h3>
+              <p className="text-gray-600 mb-4">
+                Professional installation of Christmas lights for your home or business
+              </p>
+              <div className="text-green-600 font-bold">Starting at $299</div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Design</h3>
+              <p className="text-gray-600 mb-4">
+                Custom lighting designs tailored to your property and style
+              </p>
+              <div className="text-blue-600 font-bold">Custom Quote</div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-md text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Check className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Maintenance</h3>
+              <p className="text-gray-600 mb-4">
+                Season-long maintenance and safe removal after holidays
+              </p>
+              <div className="text-purple-600 font-bold">$99/month</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Subheader */}
-      <section className="bg-slate-50 py-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-800 mb-12">
-            ✨ Brighten Your Holidays Safely ✨
-          </h2>
-          <h3 className="text-2xl md:text-3xl font-semibold text-slate-700 mb-8">
-            Expert Christmas Light Installation Company
-          </h3>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-5xl mx-auto leading-relaxed">
-            Our expert Christmas light installation company focuses on hassle-free, secure installations. 
-            We design festive displays for your home or business that bring joy and timeless charm to both indoor and outdoor spaces.
-          </p>
+      {/* Process Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              How It Works
+            </h2>
+            <p className="text-lg text-gray-600">
+              Simple 4-step process for hassle-free holiday lighting
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: 1, title: "Consultation", desc: "Free design consultation and quote" },
+              { step: 2, title: "Installation", desc: "Professional installation by our team" },
+              { step: 3, title: "Maintenance", desc: "Season-long support and maintenance" },
+              { step: 4, title: "Removal", desc: "Safe removal and storage" }
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              What Our Customers Say
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: "Sarah M.", location: "Rothesay, NB", review: "Amazing service! Our house looked magical all season." },
+              { name: "Mike F.", location: "Saint John, NB", review: "Professional team, beautiful results. Highly recommend!" },
+              { name: "Jennifer P.", location: "Quispamsis, NB", review: "Stress-free experience from start to finish." }
+            ].map((testimonial, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">"{testimonial.review}"</p>
+                <div className="font-semibold">{testimonial.name}</div>
+                <div className="text-gray-500 text-sm">{testimonial.location}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              { q: "How far in advance should I book?", a: "We recommend booking 4-6 weeks before the season." },
+              { q: "Do you provide custom designs?", a: "Yes! We create custom lighting displays for every property." },
+              { q: "What's included in maintenance?", a: "Bulb replacement, troubleshooting, and adjustments throughout the season." },
+              { q: "How much does it cost?", a: "Residential installations start at $299. We provide free quotes." }
+            ].map((faq, idx) => (
+              <div key={idx} className="border border-gray-200 rounded-lg">
+                <button
+                  className="w-full px-6 py-4 text-left font-semibold hover:bg-gray-50 flex justify-between items-center"
+                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                >
+                  <span>{faq.q}</span>
+                  <span className={`transform transition-transform ${openFaq === idx ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </button>
+                {openFaq === idx && (
+                  <div className="px-6 pb-4 text-gray-600">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <div className="flex items-center mb-4">
+                <Gift className="w-8 h-8 text-red-500 mr-2" />
+                <span className="text-2xl font-bold">PLACED</span>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Professional Christmas light installation serving Maritime Canada
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span>(506) 123-XMAS</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span>hello@placedchristmas.ca</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  <span>Saint John, NB & Area</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>Christmas Light Installation</li>
+                <li>Custom Design</li>
+                <li>Maintenance</li>
+                <li>Commercial Lighting</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="#services" className="hover:text-white">Our Services</a></li>
+                <li><a href="tel:(506)123-XMAS" className="hover:text-white">Get Quote</a></li>
+                <li><a href="#" className="hover:text-white">About</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 pt-8 mt-8 text-center text-gray-400">
+            <p>© 2025 PLACED Christmas Services. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
 
       {/* Three Core Services */}
       <section className="py-32 bg-white">
